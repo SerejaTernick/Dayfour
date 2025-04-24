@@ -1,0 +1,123 @@
+﻿<Window x:Class="Dayfour.Culculation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dayfour"
+        mc:Ignorable="d"
+       Title="Расчитать доход" Height="490" Width="600">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="203*"/>
+            <RowDefinition Height="271*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="73*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFA5A8DA" Offset="0.77"/>
+                <GradientStop Color="#FFF1BFE6" Offset="1"/>
+                <GradientStop Color="#FFD0EDC8" Offset="0.291"/>
+                <GradientStop Color="#FFF1F5C8" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="30,19,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Grid.Column="1" Height="16" Width="0" Grid.Row="1"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="30,129,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Grid.Column="1" Height="16" Width="0" Grid.Row="1"/>
+        <Label  Content="Сумма" Margin="56,105,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Leelawadee UI Semilight" Height="34" HorizontalAlignment="Left" Width="92"/>
+        <Label  Content="Срок" Margin="56,188,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Leelawadee UI Semilight" Height="34" HorizontalAlignment="Left" Width="88" Grid.RowSpan="2"/>
+        <Label Content="Ежемесячное пополнение" HorizontalAlignment="Left" Margin="58,75,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Leelawadee UI Semilight" Width="222" Height="34" Grid.Row="1"/>
+        <Grid  Grid.Column="1" Margin="39,35,25,32" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="14*"/>
+                <ColumnDefinition Width="93*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF3F3BC"/>
+                    <GradientStop Color="#FFEEC6F5" Offset="1"/>
+                    <GradientStop Color="#FFD6D8FB" Offset="0.535"/>
+                    <GradientStop Color="#FFEBD2F1" Offset="0.283"/>
+                    <GradientStop Color="White" Offset="0.857"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Label Content="Стабильный" HorizontalAlignment="Left" Margin="0,21,0,0" VerticalAlignment="Top" FontFamily="Cascadia Mono Light" FontSize="24" Width="150" Grid.Column="1" RenderTransformOrigin="0.522,0.406"/>
+            <Label  Content="Доход по вкладу:" HorizontalAlignment="Left" Margin="0,52,0,0" VerticalAlignment="Top" Width="124" Height="30" Grid.Column="1"/>
+            <Rectangle HorizontalAlignment="Left" Height="1" Margin="479,30,0,0" Stroke="Black" VerticalAlignment="Top" Width="122" Grid.Row="2" Grid.Column="1"/>
+            <TextBlock x:Name="tbStabaleMoney" HorizontalAlignment="Left" Margin="5,73,0,0" TextWrapping="Wrap" Text="1 000 000 000" VerticalAlignment="Top" Grid.Column="1"/>
+            <Rectangle HorizontalAlignment="Left" Height="1" Margin="1,90,0,0" Stroke="Black" VerticalAlignment="Top" Width="173" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Label x:Name="label_Копировать" Content="Оптимальный" HorizontalAlignment="Left" Margin="1,10,0,0" VerticalAlignment="Top" FontFamily="Cascadia Mono Light" FontSize="24" Grid.Row="1" Grid.Column="1"/>
+            <Label x:Name="label1_Копировать" Content="Доход по вкладу:" HorizontalAlignment="Left" Margin="1,42,0,0" VerticalAlignment="Top" Width="132" Grid.Row="1" Grid.Column="1" Height="25" RenderTransformOrigin="0.5,0.5">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="0"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0"/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <TextBlock x:Name="tbOptimalMoney" HorizontalAlignment="Left" Margin="5,63,0,0" TextWrapping="Wrap" Text="10 000 000" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1"/>
+            <Rectangle HorizontalAlignment="Left" Height="1" Margin="1,81,0,0" Stroke="Black" VerticalAlignment="Top" Width="173" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Label Content="Стандарт" HorizontalAlignment="Left" Margin="0,7,0,0" VerticalAlignment="Top" FontFamily="Cascadia Mono Light" FontSize="24" FontWeight="Bold" Width="164" Grid.Row="2" Grid.Column="1"/>
+            <Label  Content="Доход по вкладу:" HorizontalAlignment="Left" VerticalAlignment="Center" Width="140" Grid.Column="1" Grid.Row="2" Margin="2,0,0,0"/>
+            <TextBlock x:Name="tbStandartMoney" HorizontalAlignment="Left" Margin="7,61,0,0" TextWrapping="Wrap" Text="1 000 000" VerticalAlignment="Top" Grid.Column="1" Grid.Row="2"/>
+            <Rectangle HorizontalAlignment="Left" Height="1" Margin="4,79,0,0" Stroke="Black" VerticalAlignment="Top" Width="170" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="2">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Button x:Name="btCompare" Content="Сравнить параметры" HorizontalAlignment="Left" Margin="2,25,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.454,0.503" Width="175" Height="35" Foreground="#FF0E0E0E" FontFamily="MV Boli" FontSize="14" Grid.Row="3" FontWeight="Bold" BorderBrush="{x:Null}" Grid.Column="1" Click="btCompare_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/кнопка3.png" Stretch="UniformToFill"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+        <Label Content="Деньги в каждый карман" Margin="45,2,25,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" FontStyle="Italic" Grid.Column="1" Height="28" Foreground="#7FB289CF"/>
+        <Label Content="Деньги в каждый карман" Margin="43,2,27,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial" FontStyle="Italic" Grid.Column="1" Height="28" Foreground="#FF1C2F6E"/>
+
+        <Slider x:Name="SlidePay" Value="100"  Minimum="1000" Maximum="5000000" HorizontalAlignment="Left" Margin="58,114,0,0" Grid.Row="1" VerticalAlignment="Top" Width="222" ValueChanged="SlidePay_ValueChanged"  />
+        <Slider x:Name="SlidePeriod" Value="1" Minimum="1000" Maximum="1800" HorizontalAlignment="Left" Margin="56,24,0,0" Grid.Row="1" VerticalAlignment="Top" Width="222" ValueChanged="SlidePeriod_ValueChanged" />
+
+        <TextBox x:Name="tbShow3" Margin="58,137,42,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" IsEnabled="False" HorizontalContentAlignment="Right"/>
+        <TextBox x:Name="tbShow2" HorizontalAlignment="Left" Margin="58,51,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Background="{x:Null}" BorderBrush="{x:Null}" IsEnabled="False" HorizontalContentAlignment="Right"/>
+        <TextBox x:Name="tbShow1"  HorizontalAlignment="Left" Margin="56,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" Background="{x:Null}" BorderBrush="{x:Null}" IsEnabled="False" HorizontalContentAlignment="Right"/>
+        <Label Content="руб" Margin="262,166,5,0" VerticalAlignment="Top" FontSize="13" FontFamily="Arial" FontStyle="Italic" Height="26" Foreground="#FF1C2F6E"/>
+        <Label Content="дней" Margin="256,47,5,0" VerticalAlignment="Top" FontSize="13" FontFamily="Arial" FontStyle="Italic" Height="26" Foreground="#FF1C2F6E" Grid.Row="1"/>
+        <Label Content="руб" Margin="263,132,4,0" VerticalAlignment="Top" FontSize="13" FontFamily="Arial" FontStyle="Italic" Height="26" Foreground="#FF1C2F6E" Grid.Row="1"/>
+        <Slider x:Name="SlideSumm" Value="1000" Minimum="10000" Maximum="10000000" HorizontalAlignment="Left" Margin="60,144,0,0" VerticalAlignment="Top" Width="222" ValueChanged="SlideSumm_ValueChanged" />
+
+
+    </Grid>
+</Window>
